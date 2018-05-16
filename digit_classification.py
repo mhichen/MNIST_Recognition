@@ -48,15 +48,15 @@ if __name__ == "__main__":
     X_train, X_test, Y_train, Y_test = train_test_split(X, Y_mod, test_size = 0.2, random_state = 8012, shuffle = True)
 
     ## For debugging only
-    X_train = X_train[1:200]
-    Y_train = Y_train[1:200]
+    # X_train = X_train[1:200]
+    # Y_train = Y_train[1:200]
     
     ##***********************************************##
     ## Try Nearest Neighbors Classification ##
     ##***********************************************##
     from sklearn.neighbors import KNeighborsClassifier
     
-    neigh = KNeighborsClassifier(n_neighbors = 1, weights = 'uniform', algorithm = 'auto',
+    neigh = KNeighborsClassifier(n_neighbors = 10, weights = 'uniform', algorithm = 'auto',
                          leaf_size = 30, p = 2, metric = 'minkowski',
                          metric_params = None, n_jobs = 1)
 
@@ -70,18 +70,47 @@ if __name__ == "__main__":
 
     print()
 
-    ## Get precision and recall
+    ## Get precision and recall on training data
     precision = dict()
     recall = dict()
-    average_precision = dict()
+    avg_precision = dict()
 
     for i in range(n_classes):
         precision[i], recall[i], _ = precision_recall_curve(Y_train[:, i], Y_train_predicted[:,i])
-        average_precision[i] = average_precision_score(Y_train[:,i], Y_train_predicted[:, i])
+        avg_precision[i] = average_precision_score(Y_train[:,i], Y_train_predicted[:, i])
 
     precision["micro"], recall["micro"], _ = precision_recall_curve(Y_train.ravel(), Y_train_predicted.ravel())
 
-    average_precision["micro"] = average_precision_score(Y_train, Y_train_predicted, average = "micro")
+    avg_precision["micro"] = average_precision_score(Y_train, Y_train_predicted, average = "micro")
+    
+    print("Avg precision score on train data", avg_precision["micro"]) # 1.0, 0.950670
 
-    print("Average precision score", average_precision["micro"])
 
+
+    ## Get precision and recall on testing data
+    Y_test_predicted = neigh.predict(X_test)
+        
+    precision = dict()
+    recall = dict()
+    avg_precision = dict()
+
+    for i in range(n_classes):
+        precision[i], recall[i], _ = precision_recall_curve(Y_test[:, i], Y_test_predicted[:,i])
+        avg_precision[i] = average_precision_score(Y_test[:,i], Y_test_predicted[:, i])
+
+    precision["micro"], recall["micro"], _ = precision_recall_curve(Y_test.ravel(), Y_test_predicted.ravel())
+
+    avg_precision["micro"] = average_precision_score(Y_test, Y_test_predicted, average = "micro")
+    
+    print("Avg precision score test", avg_precision["micro"]) # 0.9520681, 0.9471126
+
+    print("Time elapsed", time.time() - start_time) # 4949.3, 6971.3
+
+    
+    # With n = 1, average test precision: 0.95206
+    # average train precision = 1.0
+    # Time elapsed: 4949 sec
+    
+    # With n = 10, average test precision: 0.94711
+    # average train precision = 0.952068
+    # Time elapsed: 6971 sec
