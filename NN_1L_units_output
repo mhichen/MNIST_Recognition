@@ -1,0 +1,277 @@
+Loaded data
+
+
+X has dimensions (70000, 784)
+Y has dimensions (70000,)
+
+
+
+n_classes: 10
+
+m_train 55000
+m_val 5000
+m_test 10000
+
+Starting to train with 10 units in the hidden layer 1
+Epoch 0 Train accuracy: 0.1134 Val accuracy: 0.1138
+Epoch 1 Train accuracy: 0.10507273 Val accuracy: 0.1064
+Epoch 2 Train accuracy: 0.10507273 Val accuracy: 0.1064
+Epoch 3 Train accuracy: 0.10507273 Val accuracy: 0.1064
+Epoch 4 Train accuracy: 0.10507273 Val accuracy: 0.1064
+Epoch 5 Train accuracy: 0.10507273 Val accuracy: 0.1064
+Epoch 6 Train accuracy: 0.10507273 Val accuracy: 0.1064
+Epoch 7 Train accuracy: 0.10507273 Val accuracy: 0.1064
+Epoch 8 Train accuracy: 0.10507273 Val accuracy: 0.1064
+Epoch 9 Train accuracy: 0.10507273 Val accuracy: 0.1064
+Epoch 10 Train accuracy: 0.10507273 Val accuracy: 0.1064
+Epoch 11 Train accuracy: 0.10507273 Val accuracy: 0.1064
+Epoch 12 Train accuracy: 0.10507273 Val accuracy: 0.1064
+Epoch 13 Train accuracy: 0.10507273 Val accuracy: 0.1064
+Epoch 14 Train accuracy: 0.10507273 Val accuracy: 0.1064
+Epoch 15 Train accuracy: 0.10507273 Val accuracy: 0.1064
+Epoch 16 Train accuracy: 0.10507273 Val accuracy: 0.1064
+Epoch 17 Train accuracy: 0.10507273 Val accuracy: 0.1064
+Epoch 18 Train accuracy: 0.10507273 Val accuracy: 0.1064
+Epoch 19 Train accuracy: 0.10507273 Val accuracy: 0.1064
+Epoch 20 Train accuracy: 0.10507273 Val accuracy: 0.1064
+Epoch 21 Train accuracy: 0.10507273 Val accuracy: 0.1064
+Epoch 22 Train accuracy: 0.10507273 Val accuracy: 0.1064
+Epoch 23 Train accuracy: 0.10507273 Val accuracy: 0.1064
+Epoch 24 Train accuracy: 0.10507273 Val accuracy: 0.1064
+Epoch 25 Train accuracy: 0.10507273 Val accuracy: 0.1064
+Epoch 26 Train accuracy: 0.10507273 Val accuracy: 0.1064
+Epoch 27 Train accuracy: 0.10507273 Val accuracy: 0.1064
+Epoch 28 Train accuracy: 0.10507273 Val accuracy: 0.1064
+Epoch 29 Train accuracy: 0.10507273 Val accuracy: 0.1064
+Time elapsed 0.40551345348358153 minutes
+
+Starting to train with 50 units in the hidden layer 1
+Epoch 0 Train accuracy: 0.0994 Val accuracy: 0.09
+Epoch 1 Train accuracy: 0.11283636 Val accuracy: 0.104
+Epoch 2 Train accuracy: 0.11281818 Val accuracy: 0.111
+Epoch 3 Train accuracy: 0.12578182 Val accuracy: 0.1356
+Epoch 4 Train accuracy: 0.09741818 Val accuracy: 0.109
+Epoch 5 Train accuracy: 0.0976 Val accuracy: 0.109
+Epoch 6 Train accuracy: 0.097636364 Val accuracy: 0.109
+Epoch 7 Train accuracy: 0.09767273 Val accuracy: 0.109
+Epoch 8 Train accuracy: 0.09772728 Val accuracy: 0.109
+Epoch 9 Train accuracy: 0.09770909 Val accuracy: 0.109
+Epoch 10 Train accuracy: 0.097745456 Val accuracy: 0.109
+Epoch 11 Train accuracy: 0.097745456 Val accuracy: 0.109
+Epoch 12 Train accuracy: 0.0978 Val accuracy: 0.109
+Epoch 13 Train accuracy: 0.09781818 Val accuracy: 0.109
+Epoch 14 Train accuracy: 0.09783636 Val accuracy: 0.109
+Epoch 15 Train accuracy: 0.09783636 Val accuracy: 0.109
+Epoch 16 Train accuracy: 0.09783636 Val accuracy: 0.109
+Epoch 17 Train accuracy: 0.09785455 Val accuracy: 0.109
+Epoch 18 Train accuracy: 0.09787273 Val accuracy: 0.109
+Epoch 19 Train accuracy: 0.09787273 Val accuracy: 0.109
+Epoch 20 Train accuracy: 0.09787273 Val accuracy: 0.109
+Epoch 21 Train accuracy: 0.09787273 Val accuracy: 0.109
+Epoch 22 Train accuracy: 0.09790909 Val accuracy: 0.109
+Epoch 23 Train accuracy: 0.11321818 Val accuracy: 0.1086
+Epoch 24 Train accuracy: 0.11323636 Val accuracy: 0.1086
+Epoch 25 Train accuracy: 0.11327273 Val accuracy: 0.1086
+Epoch 26 Train accuracy: 0.11327273 Val accuracy: 0.1086
+Epoch 27 Train accuracy: 0.113290906 Val accuracy: 0.1086
+Epoch 28 Train accuracy: 0.113290906 Val accuracy: 0.1086
+Epoch 29 Train accuracy: 0.113290906 Val accuracy: 0.1086
+Time elapsed 0.5265553037325541 minutes
+
+Starting to train with 100 units in the hidden layer 1
+Epoch 0 Train accuracy: 0.13641818 Val accuracy: 0.1458
+Epoch 1 Train accuracy: 0.10194545 Val accuracy: 0.1044
+Epoch 2 Train accuracy: 0.11783636 Val accuracy: 0.106
+Epoch 3 Train accuracy: 0.1142 Val accuracy: 0.1128
+Epoch 4 Train accuracy: 0.13305454 Val accuracy: 0.1288
+Epoch 5 Train accuracy: 0.14232728 Val accuracy: 0.1386
+Epoch 6 Train accuracy: 0.15067273 Val accuracy: 0.1464
+Epoch 7 Train accuracy: 0.16561818 Val accuracy: 0.1614
+Epoch 8 Train accuracy: 0.1696909 Val accuracy: 0.1652
+Epoch 9 Train accuracy: 0.17232728 Val accuracy: 0.168
+Epoch 10 Train accuracy: 0.17449091 Val accuracy: 0.1712
+Epoch 11 Train accuracy: 0.17665455 Val accuracy: 0.1736
+Epoch 12 Train accuracy: 0.179 Val accuracy: 0.1752
+Epoch 13 Train accuracy: 0.18143636 Val accuracy: 0.1778
+Epoch 14 Train accuracy: 0.18345454 Val accuracy: 0.1806
+Epoch 15 Train accuracy: 0.18561818 Val accuracy: 0.1828
+Epoch 16 Train accuracy: 0.18792728 Val accuracy: 0.1844
+Epoch 17 Train accuracy: 0.18947272 Val accuracy: 0.1858
+Epoch 18 Train accuracy: 0.19076364 Val accuracy: 0.1876
+Epoch 19 Train accuracy: 0.19245455 Val accuracy: 0.1888
+Epoch 20 Train accuracy: 0.19474545 Val accuracy: 0.1916
+Epoch 21 Train accuracy: 0.19710909 Val accuracy: 0.1934
+Epoch 22 Train accuracy: 0.1996 Val accuracy: 0.1972
+Epoch 23 Train accuracy: 0.20621818 Val accuracy: 0.1998
+Epoch 24 Train accuracy: 0.2084 Val accuracy: 0.203
+Epoch 25 Train accuracy: 0.21109091 Val accuracy: 0.2052
+Epoch 26 Train accuracy: 0.2141091 Val accuracy: 0.2088
+Epoch 27 Train accuracy: 0.21672727 Val accuracy: 0.211
+Epoch 28 Train accuracy: 0.21983637 Val accuracy: 0.2124
+Epoch 29 Train accuracy: 0.22265455 Val accuracy: 0.2156
+Time elapsed 0.6764822483062745 minutes
+
+Starting to train with 200 units in the hidden layer 1
+Epoch 0 Train accuracy: 0.23516363 Val accuracy: 0.2354
+Epoch 1 Train accuracy: 0.09912727 Val accuracy: 0.1018
+Epoch 2 Train accuracy: 0.10725454 Val accuracy: 0.0988
+Epoch 3 Train accuracy: 0.19678181 Val accuracy: 0.2024
+Epoch 4 Train accuracy: 0.11727273 Val accuracy: 0.1238
+Epoch 5 Train accuracy: 0.10685454 Val accuracy: 0.0978
+Epoch 6 Train accuracy: 0.12827273 Val accuracy: 0.1266
+Epoch 7 Train accuracy: 0.12430909 Val accuracy: 0.1192
+Epoch 8 Train accuracy: 0.10969091 Val accuracy: 0.1074
+Epoch 9 Train accuracy: 0.10990909 Val accuracy: 0.0994
+Epoch 10 Train accuracy: 0.1092 Val accuracy: 0.1122
+Epoch 11 Train accuracy: 0.0994 Val accuracy: 0.09
+Epoch 12 Train accuracy: 0.18561818 Val accuracy: 0.1866
+Epoch 13 Train accuracy: 0.16074546 Val accuracy: 0.172
+Epoch 14 Train accuracy: 0.13676363 Val accuracy: 0.1448
+Epoch 15 Train accuracy: 0.1376909 Val accuracy: 0.1458
+Epoch 16 Train accuracy: 0.13874546 Val accuracy: 0.1472
+Epoch 17 Train accuracy: 0.1404 Val accuracy: 0.148
+Epoch 18 Train accuracy: 0.14218181 Val accuracy: 0.1498
+Epoch 19 Train accuracy: 0.14443636 Val accuracy: 0.151
+Epoch 20 Train accuracy: 0.15565455 Val accuracy: 0.1638
+Epoch 21 Train accuracy: 0.15852727 Val accuracy: 0.1678
+Epoch 22 Train accuracy: 0.16165455 Val accuracy: 0.171
+Epoch 23 Train accuracy: 0.16518182 Val accuracy: 0.176
+Epoch 24 Train accuracy: 0.16921818 Val accuracy: 0.1804
+Epoch 25 Train accuracy: 0.17476363 Val accuracy: 0.1864
+Epoch 26 Train accuracy: 0.18025455 Val accuracy: 0.1954
+Epoch 27 Train accuracy: 0.18652727 Val accuracy: 0.1998
+Epoch 28 Train accuracy: 0.19318181 Val accuracy: 0.2068
+Epoch 29 Train accuracy: 0.20085454 Val accuracy: 0.2166
+Time elapsed 0.9752137581507365 minutes
+
+Starting to train with 300 units in the hidden layer 1
+Epoch 0 Train accuracy: 0.2152909 Val accuracy: 0.2148
+Epoch 1 Train accuracy: 0.31034544 Val accuracy: 0.315
+Epoch 2 Train accuracy: 0.28812727 Val accuracy: 0.278
+Epoch 3 Train accuracy: 0.40732726 Val accuracy: 0.3986
+Epoch 4 Train accuracy: 0.2886 Val accuracy: 0.288
+Epoch 5 Train accuracy: 0.37754545 Val accuracy: 0.3602
+Epoch 6 Train accuracy: 0.34067273 Val accuracy: 0.3288
+Epoch 7 Train accuracy: 0.35054547 Val accuracy: 0.3406
+Epoch 8 Train accuracy: 0.3578182 Val accuracy: 0.3454
+Epoch 9 Train accuracy: 0.38021818 Val accuracy: 0.3662
+Epoch 10 Train accuracy: 0.3953091 Val accuracy: 0.3852
+Epoch 11 Train accuracy: 0.40723637 Val accuracy: 0.4002
+Epoch 12 Train accuracy: 0.42016363 Val accuracy: 0.4152
+Epoch 13 Train accuracy: 0.43734545 Val accuracy: 0.4282
+Epoch 14 Train accuracy: 0.45236364 Val accuracy: 0.4434
+Epoch 15 Train accuracy: 0.4692909 Val accuracy: 0.46
+Epoch 16 Train accuracy: 0.4795091 Val accuracy: 0.4722
+Epoch 17 Train accuracy: 0.4889091 Val accuracy: 0.4812
+Epoch 18 Train accuracy: 0.5438 Val accuracy: 0.539
+Epoch 19 Train accuracy: 0.5518 Val accuracy: 0.5454
+Epoch 20 Train accuracy: 0.5603818 Val accuracy: 0.5546
+Epoch 21 Train accuracy: 0.56781816 Val accuracy: 0.5624
+Epoch 22 Train accuracy: 0.57421815 Val accuracy: 0.5694
+Epoch 23 Train accuracy: 0.57992727 Val accuracy: 0.5742
+Epoch 24 Train accuracy: 0.5862182 Val accuracy: 0.5784
+Epoch 25 Train accuracy: 0.59156364 Val accuracy: 0.5874
+Epoch 26 Train accuracy: 0.5979091 Val accuracy: 0.5948
+Epoch 27 Train accuracy: 0.6038727 Val accuracy: 0.6006
+Epoch 28 Train accuracy: 0.6097636 Val accuracy: 0.6054
+Epoch 29 Train accuracy: 0.6145273 Val accuracy: 0.6114
+Time elapsed 1.2911445260047913 minutes
+
+Starting to train with 400 units in the hidden layer 1
+Epoch 0 Train accuracy: 0.18276364 Val accuracy: 0.1812
+Epoch 1 Train accuracy: 0.39798182 Val accuracy: 0.4044
+Epoch 2 Train accuracy: 0.2074909 Val accuracy: 0.2048
+Epoch 3 Train accuracy: 0.15523636 Val accuracy: 0.1516
+Epoch 4 Train accuracy: 0.099581815 Val accuracy: 0.09
+Epoch 5 Train accuracy: 0.15916364 Val accuracy: 0.1702
+Epoch 6 Train accuracy: 0.10081818 Val accuracy: 0.0912
+Epoch 7 Train accuracy: 0.36252728 Val accuracy: 0.3456
+Epoch 8 Train accuracy: 0.2669818 Val accuracy: 0.2736
+Epoch 9 Train accuracy: 0.37094545 Val accuracy: 0.3724
+Epoch 10 Train accuracy: 0.3389818 Val accuracy: 0.3314
+Epoch 11 Train accuracy: 0.32503638 Val accuracy: 0.3164
+Epoch 12 Train accuracy: 0.35174546 Val accuracy: 0.3458
+Epoch 13 Train accuracy: 0.36687273 Val accuracy: 0.3604
+Epoch 14 Train accuracy: 0.40352726 Val accuracy: 0.396
+Epoch 15 Train accuracy: 0.4179818 Val accuracy: 0.4102
+Epoch 16 Train accuracy: 0.43243638 Val accuracy: 0.423
+Epoch 17 Train accuracy: 0.4472 Val accuracy: 0.4352
+Epoch 18 Train accuracy: 0.45952728 Val accuracy: 0.448
+Epoch 19 Train accuracy: 0.47481817 Val accuracy: 0.4642
+Epoch 20 Train accuracy: 0.48474544 Val accuracy: 0.4734
+Epoch 21 Train accuracy: 0.49356362 Val accuracy: 0.4812
+Epoch 22 Train accuracy: 0.5032182 Val accuracy: 0.4916
+Epoch 23 Train accuracy: 0.51176363 Val accuracy: 0.5006
+Epoch 24 Train accuracy: 0.52083635 Val accuracy: 0.5084
+Epoch 25 Train accuracy: 0.5296909 Val accuracy: 0.518
+Epoch 26 Train accuracy: 0.53736365 Val accuracy: 0.5258
+Epoch 27 Train accuracy: 0.54621816 Val accuracy: 0.5324
+Epoch 28 Train accuracy: 0.5555636 Val accuracy: 0.539
+Epoch 29 Train accuracy: 0.56345457 Val accuracy: 0.548
+Time elapsed 1.7386103510856628 minutes
+
+Starting to train with 800 units in the hidden layer 1
+Epoch 0 Train accuracy: 0.26234546 Val accuracy: 0.2506
+Epoch 1 Train accuracy: 0.10067273 Val accuracy: 0.0904
+Epoch 2 Train accuracy: 0.26285455 Val accuracy: 0.2658
+Epoch 3 Train accuracy: 0.18567273 Val accuracy: 0.197
+Epoch 4 Train accuracy: 0.3639818 Val accuracy: 0.3598
+Epoch 5 Train accuracy: 0.37858182 Val accuracy: 0.3662
+Epoch 6 Train accuracy: 0.46172726 Val accuracy: 0.4576
+Epoch 7 Train accuracy: 0.5623091 Val accuracy: 0.5548
+Epoch 8 Train accuracy: 0.57754546 Val accuracy: 0.5642
+Epoch 9 Train accuracy: 0.6006909 Val accuracy: 0.5886
+Epoch 10 Train accuracy: 0.61325455 Val accuracy: 0.6014
+Epoch 11 Train accuracy: 0.62856364 Val accuracy: 0.6194
+Epoch 12 Train accuracy: 0.63823634 Val accuracy: 0.6324
+Epoch 13 Train accuracy: 0.65018183 Val accuracy: 0.6458
+Epoch 14 Train accuracy: 0.65943635 Val accuracy: 0.6526
+Epoch 15 Train accuracy: 0.6743091 Val accuracy: 0.67
+Epoch 16 Train accuracy: 0.68347275 Val accuracy: 0.6788
+Epoch 17 Train accuracy: 0.6919091 Val accuracy: 0.6894
+Epoch 18 Train accuracy: 0.70043635 Val accuracy: 0.6972
+Epoch 19 Train accuracy: 0.7288 Val accuracy: 0.7266
+Epoch 20 Train accuracy: 0.7354364 Val accuracy: 0.735
+Epoch 21 Train accuracy: 0.7397818 Val accuracy: 0.7382
+Epoch 22 Train accuracy: 0.7468182 Val accuracy: 0.7488
+Epoch 23 Train accuracy: 0.7489455 Val accuracy: 0.7504
+Epoch 24 Train accuracy: 0.7505636 Val accuracy: 0.7504
+Epoch 25 Train accuracy: 0.7505818 Val accuracy: 0.7548
+Epoch 26 Train accuracy: 0.7354182 Val accuracy: 0.7376
+Epoch 27 Train accuracy: 0.74889094 Val accuracy: 0.7546
+Epoch 28 Train accuracy: 0.7381455 Val accuracy: 0.7388
+Epoch 29 Train accuracy: 0.7432727 Val accuracy: 0.7396
+Time elapsed 3.2303452531496686 minutes
+
+Starting to train with 1000 units in the hidden layer 1
+Epoch 0 Train accuracy: 0.15967272 Val accuracy: 0.142
+Epoch 1 Train accuracy: 0.19456364 Val accuracy: 0.2046
+Epoch 2 Train accuracy: 0.3422909 Val accuracy: 0.337
+Epoch 3 Train accuracy: 0.17934546 Val accuracy: 0.187
+Epoch 4 Train accuracy: 0.21072727 Val accuracy: 0.209
+Epoch 5 Train accuracy: 0.16823636 Val accuracy: 0.157
+Epoch 6 Train accuracy: 0.35321817 Val accuracy: 0.3618
+Epoch 7 Train accuracy: 0.34356365 Val accuracy: 0.3444
+Epoch 8 Train accuracy: 0.42343637 Val accuracy: 0.4148
+Epoch 9 Train accuracy: 0.11130909 Val accuracy: 0.1126
+Epoch 10 Train accuracy: 0.25654545 Val accuracy: 0.2624
+Epoch 11 Train accuracy: 0.35627273 Val accuracy: 0.3368
+Epoch 12 Train accuracy: 0.35125455 Val accuracy: 0.3466
+Epoch 13 Train accuracy: 0.5605636 Val accuracy: 0.5432
+Epoch 14 Train accuracy: 0.55776364 Val accuracy: 0.549
+Epoch 15 Train accuracy: 0.5800545 Val accuracy: 0.5638
+Epoch 16 Train accuracy: 0.5836909 Val accuracy: 0.5666
+Epoch 17 Train accuracy: 0.5997091 Val accuracy: 0.5852
+Epoch 18 Train accuracy: 0.6126909 Val accuracy: 0.604
+Epoch 19 Train accuracy: 0.62514544 Val accuracy: 0.6184
+Epoch 20 Train accuracy: 0.6343091 Val accuracy: 0.6272
+Epoch 21 Train accuracy: 0.6421273 Val accuracy: 0.6356
+Epoch 22 Train accuracy: 0.6503818 Val accuracy: 0.6438
+Epoch 23 Train accuracy: 0.6594727 Val accuracy: 0.6512
+Epoch 24 Train accuracy: 0.6711818 Val accuracy: 0.664
+Epoch 25 Train accuracy: 0.6807455 Val accuracy: 0.6736
+Epoch 26 Train accuracy: 0.68889093 Val accuracy: 0.6832
+Epoch 27 Train accuracy: 0.697 Val accuracy: 0.6922
+Epoch 28 Train accuracy: 0.70556366 Val accuracy: 0.7004
+Epoch 29 Train accuracy: 0.7139636 Val accuracy: 0.707
+Time elapsed 4.181383983294169 minutes
