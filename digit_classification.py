@@ -79,25 +79,78 @@ if __name__ == "__main__":
         print()
 
 
-
-        
-    #neigh.fit(X_train, Y_train)
-    #     # Save model
-    #     filename = 'kNN_K' + str(K) + '.sav'
-    #     pickle.dump(neigh, open(filename, 'wb'))
+    start_time = time.time()
     
-    #     Y_train_predicted = neigh.predict(X_train)
+    K = 4
+    
+    neigh = KNeighborsClassifier(n_neighbors = K, weights = 'uniform',
+                                 algorithm = 'auto', leaf_size = 30,
+                                 p = 2, metric = 'minkowski',
+                                 metric_params = None, n_jobs = 2)
 
-    #     report = classification_report(Y_train, Y_train_predicted, target_names = [str(x) for x in range(n_classes)])
 
-    #     print("Classification report on training data")
-    #     print(report)
-
-    #     scores = cross_val_score(neigh, X_train, Y_train, cv = 5)
-    #     print(scores)
         
-    #     print("Time elapsed", (time.time() - start_time)/60, "minutes")
-    #     print()
+    neigh.fit(X_train, Y_train)
+    
+    # Save model
+    filename = 'kNN_K' + str(K) + 'final.sav'
+    pickle.dump(neigh, open(filename, 'wb'))
+    
+    Y_train_predicted = neigh.predict(X_train)
+    
+    report = classification_report(Y_train, Y_train_predicted, target_names = [str(x) for x in range(n_classes)])
+    
+    print("Classification report on training data")
+    print(report)
+    
+    print("Time elapsed", (time.time() - start_time)/60, "minutes")
+    print()
 
-    # #model = pickle.load(open("kNN_K1.sav", 'rb'))
-    # #Y_test_predicted = model.predict(X_test)
+    # Classification report on training data
+    #              precision    recall  f1-score   support
+    
+    #           0       0.99      0.99      0.99      5508
+    #           1       0.98      0.99      0.99      6295
+    #           2       1.00      0.96      0.98      5548
+    #           3       0.99      0.97      0.98      5690
+    #           4       1.00      0.97      0.98      5495
+    #           5       1.00      0.96      0.98      5063
+    #           6       0.99      0.99      0.99      5504
+    #           7       0.99      0.98      0.98      5867
+    #           8       1.00      0.93      0.96      5444
+    #           9       0.99      0.96      0.98      5586
+    
+    # avg / total       0.99      0.97      0.98     56000
+    
+    # Time elapsed 58.82667687336604 minutes
+
+    start_time = time.time()
+
+    model = pickle.load(open("kNN_K4final.sav", 'rb'))
+    Y_test_predicted = model.predict(X_test)
+
+    report = classification_report(Y_test, Y_test_predicted, target_names = [str(x) for x in range(n_classes)])
+    
+    print("Classification report on test data")
+    print(report)
+    
+    print("Time elapsed", (time.time() - start_time)/60, "minutes")
+    print()
+
+    # Classification report on test data
+    #              precision    recall  f1-score   support
+    
+    #           0       0.99      0.99      0.99      1395
+    #           1       0.98      0.99      0.99      1582
+    #           2       0.99      0.96      0.97      1442
+    #           3       0.99      0.95      0.97      1451
+    #           4       0.99      0.96      0.97      1329
+    #           5       0.98      0.95      0.97      1250
+    #           6       0.99      0.98      0.99      1372
+    #           7       0.98      0.97      0.97      1426
+    #           8       0.99      0.91      0.95      1381
+    #           9       0.97      0.95      0.96      1372
+    
+    # avg / total       0.99      0.96      0.97     14000
+    
+    # Time elapsed 14.392941125233968 minutes

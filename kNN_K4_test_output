@@ -1,0 +1,28 @@
+Loaded data
+
+
+X has dimensions (70000, 784)
+Y has dimensions (70000,)
+
+
+
+n_classes: 10
+
+Classification report on test data
+             precision    recall  f1-score   support
+
+          0       0.99      0.99      0.99      1395
+          1       0.98      0.99      0.99      1582
+          2       0.99      0.96      0.97      1442
+          3       0.99      0.95      0.97      1451
+          4       0.99      0.96      0.97      1329
+          5       0.98      0.95      0.97      1250
+          6       0.99      0.98      0.99      1372
+          7       0.98      0.97      0.97      1426
+          8       0.99      0.91      0.95      1381
+          9       0.97      0.95      0.96      1372
+
+avg / total       0.99      0.96      0.97     14000
+
+Time elapsed 14.392941125233968 minutes
+
