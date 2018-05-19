@@ -1,12 +1,15 @@
+#!/usr/bin/python3
 import time
 import numpy as np
 import scipy.io as sio
 import matplotlib
 import matplotlib.pyplot as plt
+import pickle
+
 from sklearn.preprocessing import label_binarize
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import confusion_matrix
-from sklearn.metrics import precision_recall_curve, average_precision_score
+from sklearn.model_selection import train_test_split, cross_val_score
+from sklearn.metrics import confusion_matrix, precision_recall_curve, average_precision_score, classification_report
+from sklearn.neighbors import KNeighborsClassifier
 
 def show_image(pixels, labels, ind, shape):
 
@@ -21,8 +24,6 @@ def show_image(pixels, labels, ind, shape):
 if __name__ == "__main__":
 
 
-    start_time = time.time()
-    
     # Load the data
     mnist = sio.loadmat('/home/ivy/scikit_learn_data/mldata/mnist-original', squeeze_me = True)
 
@@ -42,75 +43,61 @@ if __name__ == "__main__":
     print()
     
     # Check a few images
-    #show_image(X, Y, 56000, (28, 28))
+    # show_image(X, Y, 56000, (28, 28))
 
     ## Split data into train, test
     X_train, X_test, Y_train, Y_test = train_test_split(X, Y_mod, test_size = 0.2, random_state = 8012, shuffle = True)
 
     ## For debugging only
-    # X_train = X_train[1:200]
-    # Y_train = Y_train[1:200]
+    # X_train = X_train[1:2000]
+    # Y_train = Y_train[1:2000]
     
     ##***********************************************##
-    ## Try Nearest Neighbors Classification ##
+    ## Try different K's:                            ##
+    ## K - Nearest Neighbors Classification          ##
     ##***********************************************##
-    from sklearn.neighbors import KNeighborsClassifier
-    
-    neigh = KNeighborsClassifier(n_neighbors = 10, weights = 'uniform', algorithm = 'auto',
-                         leaf_size = 30, p = 2, metric = 'minkowski',
-                         metric_params = None, n_jobs = 1)
 
-    neigh.fit(X_train, Y_train)
+    for K in range(1, 11):
 
-    Y_train_predicted = neigh.predict(X_train)
-
-    print(Y_train_predicted[0:20])
-    # [ 1.  7.  4.  7.  9.  6.  4.  0.  7.  1.  8.  6.  8.  9.  2.  8.  6.  6.
-    #   1.  6.]
-
-    print()
-
-    ## Get precision and recall on training data
-    precision = dict()
-    recall = dict()
-    avg_precision = dict()
-
-    for i in range(n_classes):
-        precision[i], recall[i], _ = precision_recall_curve(Y_train[:, i], Y_train_predicted[:,i])
-        avg_precision[i] = average_precision_score(Y_train[:,i], Y_train_predicted[:, i])
-
-    precision["micro"], recall["micro"], _ = precision_recall_curve(Y_train.ravel(), Y_train_predicted.ravel())
-
-    avg_precision["micro"] = average_precision_score(Y_train, Y_train_predicted, average = "micro")
-    
-    print("Avg precision score on train data", avg_precision["micro"]) # 1.0, 0.950670
-
-
-
-    ## Get precision and recall on testing data
-    Y_test_predicted = neigh.predict(X_test)
+        print("Fitting for K = ", K)
         
-    precision = dict()
-    recall = dict()
-    avg_precision = dict()
+        start_time = time.time()
+        
+        neigh = KNeighborsClassifier(n_neighbors = K, weights = 'uniform',
+                                 algorithm = 'auto', leaf_size = 30,
+                                 p = 2, metric = 'minkowski',
+                                     metric_params = None, n_jobs = 2)
 
-    for i in range(n_classes):
-        precision[i], recall[i], _ = precision_recall_curve(Y_test[:, i], Y_test_predicted[:,i])
-        avg_precision[i] = average_precision_score(Y_test[:,i], Y_test_predicted[:, i])
 
-    precision["micro"], recall["micro"], _ = precision_recall_curve(Y_test.ravel(), Y_test_predicted.ravel())
 
-    avg_precision["micro"] = average_precision_score(Y_test, Y_test_predicted, average = "micro")
+        scores = cross_val_score(neigh, X_train, Y_train, scoring = 'average_precision', cv = 3)
+
+        print("Average precision scores across segments")
+        print(scores)
+
+        print("Time elapsed", (time.time() - start_time)/60, "minutes")
+        print()
+
+
+
+        
+    #neigh.fit(X_train, Y_train)
+    #     # Save model
+    #     filename = 'kNN_K' + str(K) + '.sav'
+    #     pickle.dump(neigh, open(filename, 'wb'))
     
-    print("Avg precision score test", avg_precision["micro"]) # 0.9520681, 0.9471126
+    #     Y_train_predicted = neigh.predict(X_train)
 
-    print("Time elapsed", time.time() - start_time) # 4949.3, 6971.3
+    #     report = classification_report(Y_train, Y_train_predicted, target_names = [str(x) for x in range(n_classes)])
 
-    
-    # With n = 1, average test precision: 0.95206
-    # average train precision = 1.0
-    # Time elapsed: 4949 sec
-    
-    # With n = 10, average test precision: 0.94711
-    # average train precision = 0.952068
-    # Time elapsed: 6971 sec
+    #     print("Classification report on training data")
+    #     print(report)
+
+    #     scores = cross_val_score(neigh, X_train, Y_train, cv = 5)
+    #     print(scores)
+        
+    #     print("Time elapsed", (time.time() - start_time)/60, "minutes")
+    #     print()
+
+    # #model = pickle.load(open("kNN_K1.sav", 'rb'))
+    # #Y_test_predicted = model.predict(X_test)

@@ -1,0 +1,60 @@
+Loaded data
+
+
+X has dimensions (70000, 784)
+Y has dimensions (70000,)
+
+
+
+n_classes: 10
+
+Fitting for K =  1
+Average precision scores across segments
+[0.94468429 0.9415251  0.93994049]
+Time elapsed 35.98145067294438 minutes
+
+Fitting for K =  2
+Average precision scores across segments
+[0.9698068  0.96919973 0.96838685]
+Time elapsed 35.17756067117055 minutes
+
+Fitting for K =  3
+Average precision scores across segments
+[0.97722328 0.97683502 0.97685287]
+Time elapsed 35.170497465133664 minutes
+
+Fitting for K =  4
+Average precision scores across segments
+[0.9805916  0.98028565 0.98097885]
+Time elapsed 34.39730676412582 minutes
+
+Fitting for K =  5
+Average precision scores across segments
+[0.98275163 0.98274364 0.98269457]
+Time elapsed 34.7397271712621 minutes
+
+Fitting for K =  6
+Average precision scores across segments
+[0.98441641 0.98455637 0.98410806]
+Time elapsed 34.513516120115916 minutes
+
+Fitting for K =  7
+Average precision scores across segments
+[0.9855448  0.98583101 0.98510197]
+Time elapsed 34.35796396334966 minutes
+
+Fitting for K =  8
+Average precision scores across segments
+[0.98647033 0.98650327 0.98610966]
+Time elapsed 34.43211631774902 minutes
+
+Fitting for K =  9
+Average precision scores across segments
+[0.98739787 0.98690906 0.9867692 ]
+Time elapsed 34.69933211803436 minutes
+
+Fitting for K =  10
+Average precision scores across segments
+[0.98776198 0.98718662 0.98676258]
+Time elapsed 610.4366808056832 minutes
+
