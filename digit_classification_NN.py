@@ -4,9 +4,9 @@ import numpy as np
 import scipy.io as sio
 import matplotlib
 import matplotlib.pyplot as plt
-
+import os
 import tensorflow as tf
-#os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 from sklearn.preprocessing import label_binarize
 from sklearn.model_selection import train_test_split, cross_val_score
@@ -83,8 +83,8 @@ if __name__ == "__main__":
     
 
     ## For debugging only
-    # X_train = X_train[1:50000]
-    # Y_train = Y_train[1:50000]
+    # X_train = X_train[0:200]
+    # Y_train = Y_train[0:200]
 
 
     n_inputs = X.shape[1]
@@ -123,14 +123,22 @@ if __name__ == "__main__":
                 
         with tf.name_scope("eval"):
 
-            correct = tf.nn.in_top_k(logits, Y, 1)
-            accuracy = tf.reduce_mean(tf.cast(correct, tf.float32))
+            #correct = tf.nn.in_top_k(logits, Y, 1)
+            #accuracy = tf.reduce_mean(tf.cast(correct, tf.float32))
+            
+            prediction = tf.argmax(logits, axis = 1)
+            precision, precision_op = tf.metrics.precision(Y, tf.argmax(logits, axis = 1))
+            recall, recall_op = tf.metrics.recall(Y, prediction)
+            
+
+            
 
         init = tf.global_variables_initializer()
+        init_local = tf.local_variables_initializer()
 
         saver = tf.train.Saver
 
-        n_epochs = 30
+        n_epochs = 50
         #batch_size = 10
 
         with tf.Session() as sess:
@@ -141,17 +149,30 @@ if __name__ == "__main__":
             start_time = time.time()
             
             init.run()
+            init_local.run()
             
             for epoch in range(n_epochs):
                 
                 sess.run(training_op, feed_dict = {X: X_train, Y: Y_train})
+                prec_train = sess.run(precision_op, feed_dict = {X: X_train, Y: Y_train})
+                recall_train = sess.run(recall_op, feed_dict = {X: X_train, Y: Y_train})
+
+                prec_val = sess.run(precision_op, feed_dict = {X: X_val, Y: Y_val})
+                recall_val = sess.run(recall_op, feed_dict = {X: X_val, Y: Y_val})
+
+                #sess.run(op)
+
+                #(feed_dict = {X: X_train, Y: Y_train})
+                #acc_train = accuracy.eval(feed_dict = {X: X_train, Y: Y_train})
                 
-                acc_train = accuracy.eval(feed_dict = {X: X_train, Y: Y_train})
+                #acc_val = accuracy.eval(feed_dict = {X: X_val, Y: Y_val})
                 
-                acc_val = accuracy.eval(feed_dict = {X: X_val, Y: Y_val})
+                print("Epoch", epoch, "Train precision:", prec_train, "Train recall:", recall_train)
+                print("Epoch", epoch, "Val precision:", prec_val, "Val recall:", recall_val)
+                print()
                 
-                print("Epoch", epoch, "Train accuracy:", acc_train, "Val accuracy:", acc_val)
+                #, "Val accuracy:", acc_val)
         
 
-
             print("Time elapsed", (time.time() - start_time)/60, "minutes")
+            print()
