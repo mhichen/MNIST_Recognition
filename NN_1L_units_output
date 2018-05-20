@@ -12,51 +12,44 @@ m_train 55000
 m_val 5000
 m_test 10000
 
-Starting to train with 10 epochs
-Total epochs: 10 Train precision: 0.9161258 Train recall: 0.98433465
-Total epochs: 10 Val precision: 0.91647756 Val recall: 0.9842132
+Starting to train with <function sigmoid at 0x7f10ba2ec510>
+Total epochs: 200 Train precision: 0.98451537 Train recall: 0.97456026
+Total epochs: 200 Val precision: 0.98451823 Val recall: 0.97456604
 
-Time elapsed 0.6002802371978759 minutes
-
-
-Starting to train with 30 epochs
-Total epochs: 30 Train precision: 0.9519907 Train recall: 0.9727017
-Total epochs: 30 Val precision: 0.9520368 Val recall: 0.97272646
-
-Time elapsed 1.7540317932764689 minutes
+Time elapsed 11.998969829082489 minutes
 
 
-Starting to train with 100 epochs
-Total epochs: 100 Train precision: 0.9688669 Train recall: 0.9868086
-Total epochs: 100 Val precision: 0.9688783 Val recall: 0.98681265
+Starting to train with <function tanh at 0x7f10ba2ec620>
+Total epochs: 200 Train precision: 0.9855258 Train recall: 0.98312575
+Total epochs: 200 Val precision: 0.9855279 Val recall: 0.9831279
 
-Time elapsed 6.896521174907685 minutes
-
-
-Starting to train with 200 epochs
-Total epochs: 200 Train precision: 0.98474616 Train recall: 0.981107
-Total epochs: 200 Val precision: 0.98474956 Val recall: 0.98110735
-
-Time elapsed 13.689507285753885 minutes
+Time elapsed 12.696717381477356 minutes
 
 
-Starting to train with 400 epochs
-Total epochs: 400 Train precision: 0.9832936 Train recall: 0.9794044
-Total epochs: 400 Val precision: 0.9832956 Val recall: 0.9794073
+Starting to train with <function relu at 0x7f10ba418488>
+Total epochs: 200 Train precision: 0.9854882 Train recall: 0.99004
+Total epochs: 200 Val precision: 0.9854913 Val recall: 0.9900423
 
-Time elapsed 25.764513758818307 minutes
-
-
-Starting to train with 800 epochs
-Total epochs: 800 Train precision: 0.9899237 Train recall: 0.9871549
-Total epochs: 800 Val precision: 0.9899242 Val recall: 0.98715556
-
-Time elapsed 47.24598336617152 minutes
+Time elapsed 11.774309933185577 minutes
 
 
-Starting to train with 1000 epochs
-Total epochs: 1000 Train precision: 0.9915557 Train recall: 0.9829574
-Total epochs: 1000 Val precision: 0.9915561 Val recall: 0.9829583
+Starting to train with <function leaky_relu at 0x7f10b9d70598>
+Total epochs: 200 Train precision: 0.90060467 Train recall: 0.106950395
+Total epochs: 200 Val precision: 0.90060467 Val recall: 0.10690541
 
-Time elapsed 56.86852171421051 minutes
+Time elapsed 11.475486739476521 minutes
+
+
+Starting to train with <function elu at 0x7f10ba3f3158>
+Total epochs: 200 Train precision: 0.9033602 Train recall: 0.9721842
+Total epochs: 200 Val precision: 0.90336305 Val recall: 0.97219586
+
+Time elapsed 12.047151199976604 minutes
+
+
+Starting to train with <function relu6 at 0x7f10b9d70510>
+Total epochs: 200 Train precision: 0.9900129 Train recall: 0.98911
+Total epochs: 200 Val precision: 0.99001324 Val recall: 0.9891109
+
+Time elapsed 12.86932369073232 minutes
 

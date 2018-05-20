@@ -91,7 +91,7 @@ if __name__ == "__main__":
     n_hidden1 = 300
     n_outputs = 10
 
-    for n_epochs in [10, 30, 100, 200, 400, 800, 1000]:
+    for activ in [tf.nn.sigmoid, tf.nn.tanh, tf.nn.relu, tf.nn.leaky_relu, tf.nn.elu, tf.nn.relu6]:
 
         tf.reset_default_graph()
         
@@ -102,7 +102,7 @@ if __name__ == "__main__":
         with tf.name_scope("NN_1L"):
             
             hidden1 = tf.layers.dense(X, n_hidden1, name = "hidden1",
-                                      activation = tf.nn.relu)
+                                      activation = activ)
 
             logits = tf.layers.dense(hidden1, n_outputs, name = "outputs")
         
@@ -138,13 +138,13 @@ if __name__ == "__main__":
 
         saver = tf.train.Saver
 
-        #n_epochs = 50
+        n_epochs = 200
         #batch_size = 10
 
         with tf.Session() as sess:
 
             print()
-            print("Starting to train with", n_epochs, "epochs")
+            print("Starting to train with", activ)
 
             
             start_time = time.time()
