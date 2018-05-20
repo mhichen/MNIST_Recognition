@@ -88,10 +88,10 @@ if __name__ == "__main__":
 
 
     n_inputs = X.shape[1]
-    #n_hidden1 = 10
+    n_hidden1 = 300
     n_outputs = 10
 
-    for n_hidden1 in [10, 50, 100, 200, 300, 400, 800, 1000]:
+    for n_epochs in [10, 30, 100, 200, 400, 800, 1000]:
 
         tf.reset_default_graph()
         
@@ -138,13 +138,14 @@ if __name__ == "__main__":
 
         saver = tf.train.Saver
 
-        n_epochs = 50
+        #n_epochs = 50
         #batch_size = 10
 
         with tf.Session() as sess:
 
             print()
-            print("Starting to train with", n_hidden1, "units in the hidden layer 1")
+            print("Starting to train with", n_epochs, "epochs")
+
             
             start_time = time.time()
             
@@ -152,7 +153,7 @@ if __name__ == "__main__":
             init_local.run()
             
             for epoch in range(n_epochs):
-                
+
                 sess.run(training_op, feed_dict = {X: X_train, Y: Y_train})
                 prec_train = sess.run(precision_op, feed_dict = {X: X_train, Y: Y_train})
                 recall_train = sess.run(recall_op, feed_dict = {X: X_train, Y: Y_train})
@@ -167,9 +168,9 @@ if __name__ == "__main__":
                 
                 #acc_val = accuracy.eval(feed_dict = {X: X_val, Y: Y_val})
                 
-                print("Epoch", epoch, "Train precision:", prec_train, "Train recall:", recall_train)
-                print("Epoch", epoch, "Val precision:", prec_val, "Val recall:", recall_val)
-                print()
+            print("Total epochs:", n_epochs, "Train precision:", prec_train, "Train recall:", recall_train)
+            print("Total epochs:", n_epochs, "Val precision:", prec_val, "Val recall:", recall_val)
+            print()
                 
                 #, "Val accuracy:", acc_val)
         
