@@ -118,9 +118,9 @@ if __name__ == "__main__":
 
     with tf.name_scope("train"):
                 
-        optimizer = tf.train.GradientDescentOptimizer(learning_rate)
-        # optimizer = tf.train.MomentumOptimizer(learning_rate,
-        #                                       momentum = 0.9)
+        #optimizer = tf.train.GradientDescentOptimizer(learning_rate)
+        optimizer = tf.train.MomentumOptimizer(learning_rate,
+                                               momentum = 0.9)
         training_op = optimizer.minimize(loss)
                 
     with tf.name_scope("eval"):
@@ -162,13 +162,6 @@ if __name__ == "__main__":
 
             prec_val = sess.run(precision_op, feed_dict = {X: X_val, Y: Y_val})
             recall_val = sess.run(recall_op, feed_dict = {X: X_val, Y: Y_val})
-
-            #sess.run(op)
-            
-            #(feed_dict = {X: X_train, Y: Y_train})
-            #acc_train = accuracy.eval(feed_dict = {X: X_train, Y: Y_train})
-            
-            #acc_val = accuracy.eval(feed_dict = {X: X_val, Y: Y_val})
                 
             print("Epoch ", epoch, "Train precision:", prec_train, "Train recall:", recall_train)
             print("Epoch:", epoch, "Val precision:", prec_val, "Val recall:", recall_val)
