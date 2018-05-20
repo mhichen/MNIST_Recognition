@@ -119,9 +119,7 @@ if __name__ == "__main__":
     with tf.name_scope("train"):
                 
         # optimizer = tf.train.GradientDescentOptimizer(learning_rate)
-        optimizer = tf.train.MomentumOptimizer(learning_rate,
-                                               momentum = 0.9,
-                                               use_nesterov = True)
+        optimizer = tf.train.AdagradOptimizer(learning_rate)
 
         training_op = optimizer.minimize(loss)
                 
