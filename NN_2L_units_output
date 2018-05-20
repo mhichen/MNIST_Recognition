@@ -1,0 +1,619 @@
+Loaded data
+
+
+X has dimensions (70000, 784)
+Y has dimensions (70000,)
+
+
+
+n_classes: 10
+
+m_train 55000
+m_val 5000
+m_test 10000
+
+Starting to train with Leaky ReLu activation and Adam
+First hidden layer: 200
+Second hidden layer: 200
+Epoch  0 Train precision: 0.9006 Train recall: 1.0
+Epoch: 0 Val precision: 0.90138334 Val recall: 1.0
+
+Epoch  1 Train precision: 0.91322404 Train recall: 0.9997201
+Epoch: 1 Val precision: 0.9139368 Val recall: 0.9997319
+
+Epoch  2 Train precision: 0.92802167 Train recall: 0.8731698
+Epoch: 2 Val precision: 0.92904013 Val recall: 0.86560166
+
+Epoch  3 Train precision: 0.9214532 Train recall: 0.89703566
+Epoch: 3 Val precision: 0.921182 Val recall: 0.8992012
+
+Epoch  4 Train precision: 0.916929 Train recall: 0.9179809
+Epoch: 4 Val precision: 0.9168013 Val recall: 0.919361
+
+Epoch  5 Train precision: 0.91406935 Train recall: 0.9318452
+Epoch: 5 Val precision: 0.9140079 Val recall: 0.9328008
+
+Epoch  6 Train precision: 0.91590583 Train recall: 0.9416813
+Epoch: 6 Val precision: 0.9160958 Val recall: 0.9423822
+
+Epoch  7 Train precision: 0.92398685 Train recall: 0.9454725
+Epoch: 7 Val precision: 0.92462814 Val recall: 0.9457316
+
+Epoch  8 Train precision: 0.9306749 Train recall: 0.9439731
+Epoch: 8 Val precision: 0.93117917 Val recall: 0.9437901
+
+Epoch  9 Train precision: 0.93646836 Train recall: 0.9421925
+Epoch: 9 Val precision: 0.9369032 Val recall: 0.94204646
+
+Epoch  10 Train precision: 0.940829 Train recall: 0.94499314
+Epoch: 10 Val precision: 0.94115984 Val recall: 0.9452256
+
+Epoch  11 Train precision: 0.944712 Train recall: 0.94765115
+Epoch: 11 Val precision: 0.94501364 Val recall: 0.9478487
+
+Epoch  12 Train precision: 0.9480318 Train recall: 0.950244
+Epoch: 12 Val precision: 0.9482911 Val recall: 0.9504451
+
+Epoch  13 Train precision: 0.95069104 Train recall: 0.9529585
+Epoch: 13 Val precision: 0.9508978 Val recall: 0.9531659
+
+Epoch  14 Train precision: 0.952814 Train recall: 0.95559907
+Epoch: 14 Val precision: 0.95297503 Val recall: 0.95580375
+
+Epoch  15 Train precision: 0.9549149 Train recall: 0.95788693
+Epoch: 15 Val precision: 0.9550788 Val recall: 0.9580622
+
+Epoch  16 Train precision: 0.95669246 Train recall: 0.9599677
+Epoch: 16 Val precision: 0.9568287 Val recall: 0.9601277
+
+Epoch  17 Train precision: 0.95819 Train recall: 0.96186674
+Epoch: 17 Val precision: 0.9583071 Val recall: 0.96201825
+
+Epoch  18 Train precision: 0.95939875 Train recall: 0.96364415
+Epoch: 18 Val precision: 0.95950353 Val recall: 0.96378666
+
+Epoch  19 Train precision: 0.9605034 Train recall: 0.96526355
+Epoch: 19 Val precision: 0.960601 Val recall: 0.96539396
+
+Epoch  20 Train precision: 0.9617519 Train recall: 0.9666193
+Epoch: 20 Val precision: 0.9618496 Val recall: 0.9667319
+
+Epoch  21 Train precision: 0.96308243 Train recall: 0.96762776
+Epoch: 21 Val precision: 0.96318513 Val recall: 0.9677079
+
+Epoch  22 Train precision: 0.96440613 Train recall: 0.9682852
+Epoch: 22 Val precision: 0.96450746 Val recall: 0.96834093
+
+Epoch  23 Train precision: 0.96565664 Train recall: 0.9687624
+Epoch: 23 Val precision: 0.9657535 Val recall: 0.968801
+
+Epoch  24 Train precision: 0.9668056 Train recall: 0.9692637
+Epoch: 24 Val precision: 0.96689653 Val recall: 0.9693079
+
+Epoch  25 Train precision: 0.967803 Train recall: 0.96989316
+Epoch: 25 Val precision: 0.96788216 Val recall: 0.96994436
+
+Epoch  26 Train precision: 0.9686722 Train recall: 0.97061396
+Epoch: 26 Val precision: 0.9687395 Val recall: 0.97067404
+
+Epoch  27 Train precision: 0.9694339 Train recall: 0.9713692
+Epoch: 27 Val precision: 0.9694929 Val recall: 0.9714315
+
+Epoch  28 Train precision: 0.9701161 Train recall: 0.9721055
+Epoch: 28 Val precision: 0.9701711 Val recall: 0.9721641
+
+Epoch  29 Train precision: 0.970736 Train recall: 0.9728204
+Epoch: 29 Val precision: 0.9707833 Val recall: 0.97287625
+
+Epoch  30 Train precision: 0.97126776 Train recall: 0.97349316
+Epoch: 30 Val precision: 0.97131157 Val recall: 0.9735478
+
+Epoch  31 Train precision: 0.97174406 Train recall: 0.97414005
+Epoch: 31 Val precision: 0.9717847 Val recall: 0.9741936
+
+Epoch  32 Train precision: 0.97221845 Train recall: 0.9747459
+Epoch: 32 Val precision: 0.9722588 Val recall: 0.97479576
+
+Epoch  33 Train precision: 0.97274405 Train recall: 0.97529536
+Epoch: 33 Val precision: 0.9727866 Val recall: 0.9753407
+
+Epoch  34 Train precision: 0.97329676 Train recall: 0.9757641
+Epoch: 34 Val precision: 0.9733387 Val recall: 0.97580224
+
+Epoch  35 Train precision: 0.9738482 Train recall: 0.97616297
+Epoch: 35 Val precision: 0.97389066 Val recall: 0.97619706
+
+Epoch  36 Train precision: 0.9743971 Train recall: 0.97651815
+Epoch: 36 Val precision: 0.97444 Val recall: 0.9765466
+
+Epoch  37 Train precision: 0.97493136 Train recall: 0.9768317
+Epoch: 37 Val precision: 0.9749734 Val recall: 0.9768587
+
+Epoch  38 Train precision: 0.9754259 Train recall: 0.9771648
+Epoch: 38 Val precision: 0.9754635 Val recall: 0.9771932
+
+Epoch  39 Train precision: 0.97587126 Train recall: 0.9775317
+Epoch: 39 Val precision: 0.9759057 Val recall: 0.9775604
+
+Epoch  40 Train precision: 0.9762894 Train recall: 0.97790724
+Epoch: 40 Val precision: 0.97632134 Val recall: 0.9779359
+
+Epoch  41 Train precision: 0.9766844 Train recall: 0.9782742
+Epoch: 41 Val precision: 0.9767161 Val recall: 0.9783036
+
+Epoch  42 Train precision: 0.97705525 Train recall: 0.97863007
+Epoch: 42 Val precision: 0.9770843 Val recall: 0.97865814
+
+Epoch  43 Train precision: 0.9773954 Train recall: 0.9789761
+Epoch: 43 Val precision: 0.9774223 Val recall: 0.9790045
+
+Epoch  44 Train precision: 0.97772044 Train recall: 0.9793062
+Epoch: 44 Val precision: 0.97774494 Val recall: 0.97933424
+
+Epoch  45 Train precision: 0.9780398 Train recall: 0.979618
+Epoch: 45 Val precision: 0.9780648 Val recall: 0.979644
+
+Epoch  46 Train precision: 0.9783628 Train recall: 0.97990894
+Epoch: 46 Val precision: 0.9783866 Val recall: 0.9799327
+
+Epoch  47 Train precision: 0.97868264 Train recall: 0.9801797
+Epoch: 47 Val precision: 0.9787061 Val recall: 0.98020136
+
+Epoch  48 Train precision: 0.9789987 Train recall: 0.9804224
+Epoch: 48 Val precision: 0.9790219 Val recall: 0.98044163
+
+Epoch  49 Train precision: 0.97929996 Train recall: 0.980652
+Epoch: 49 Val precision: 0.9793214 Val recall: 0.9806716
+
+Epoch  50 Train precision: 0.97957915 Train recall: 0.98087764
+Epoch: 50 Val precision: 0.97959983 Val recall: 0.9808972
+
+Epoch  51 Train precision: 0.9798382 Train recall: 0.9811085
+Epoch: 51 Val precision: 0.9798573 Val recall: 0.98112804
+
+Epoch  52 Train precision: 0.9800862 Train recall: 0.98133826
+Epoch: 52 Val precision: 0.98010457 Val recall: 0.9813557
+
+Epoch  53 Train precision: 0.98032635 Train recall: 0.98157465
+Epoch: 53 Val precision: 0.98034406 Val recall: 0.98159415
+
+Epoch  54 Train precision: 0.980556 Train recall: 0.98181325
+Epoch: 54 Val precision: 0.98057234 Val recall: 0.9818316
+
+Epoch  55 Train precision: 0.9807678 Train recall: 0.9820472
+Epoch: 55 Val precision: 0.9807835 Val recall: 0.98206425
+
+Epoch  56 Train precision: 0.980978 Train recall: 0.98226744
+Epoch: 56 Val precision: 0.98099285 Val recall: 0.9822836
+
+Epoch  57 Train precision: 0.9811924 Train recall: 0.98246986
+Epoch: 57 Val precision: 0.9812082 Val recall: 0.98248446
+
+Epoch  58 Train precision: 0.9814151 Train recall: 0.98265725
+Epoch: 58 Val precision: 0.9814312 Val recall: 0.9826713
+
+Epoch  59 Train precision: 0.9816404 Train recall: 0.98282945
+Epoch: 59 Val precision: 0.9816563 Val recall: 0.98284394
+
+Epoch  60 Train precision: 0.9818576 Train recall: 0.9830002
+Epoch: 60 Val precision: 0.9818729 Val recall: 0.9830143
+
+Epoch  61 Train precision: 0.9820616 Train recall: 0.9831679
+Epoch: 61 Val precision: 0.9820756 Val recall: 0.9831818
+
+Epoch  62 Train precision: 0.9822539 Train recall: 0.9833381
+Epoch: 62 Val precision: 0.9822673 Val recall: 0.9833522
+
+Epoch  63 Train precision: 0.98243916 Train recall: 0.98351175
+Epoch: 63 Val precision: 0.98245186 Val recall: 0.9835262
+
+Epoch  64 Train precision: 0.98261905 Train recall: 0.9836837
+Epoch: 64 Val precision: 0.9826316 Val recall: 0.9836974
+
+Epoch  65 Train precision: 0.98279107 Train recall: 0.9838535
+Epoch: 65 Val precision: 0.98280346 Val recall: 0.9838668
+
+Epoch  66 Train precision: 0.9829601 Train recall: 0.9840177
+Epoch: 66 Val precision: 0.9829726 Val recall: 0.98402953
+
+Epoch  67 Train precision: 0.98312676 Train recall: 0.9841733
+Epoch: 67 Val precision: 0.9831392 Val recall: 0.9841847
+
+Epoch  68 Train precision: 0.9832964 Train recall: 0.98431844
+Epoch: 68 Val precision: 0.98330873 Val recall: 0.9843292
+
+Epoch  69 Train precision: 0.98346114 Train recall: 0.984456
+Epoch: 69 Val precision: 0.98347306 Val recall: 0.98446697
+
+Epoch  70 Train precision: 0.9836218 Train recall: 0.9845917
+Epoch: 70 Val precision: 0.98363286 Val recall: 0.9846027
+
+Epoch  71 Train precision: 0.98377526 Train recall: 0.9847268
+Epoch: 71 Val precision: 0.98378575 Val recall: 0.984738
+
+Epoch  72 Train precision: 0.9839221 Train recall: 0.98486346
+Epoch: 72 Val precision: 0.9839321 Val recall: 0.9848754
+
+Epoch  73 Train precision: 0.9840626 Train recall: 0.9850005
+Epoch: 73 Val precision: 0.9840725 Val recall: 0.98501176
+
+Epoch  74 Train precision: 0.9841987 Train recall: 0.98513824
+Epoch: 74 Val precision: 0.9842085 Val recall: 0.98514926
+
+Epoch  75 Train precision: 0.98433304 Train recall: 0.98527193
+Epoch: 75 Val precision: 0.9843431 Val recall: 0.9852831
+
+Epoch  76 Train precision: 0.9844679 Train recall: 0.9853992
+Epoch: 76 Val precision: 0.9844777 Val recall: 0.9854094
+
+Epoch  77 Train precision: 0.9846051 Train recall: 0.9855166
+Epoch: 77 Val precision: 0.9846144 Val recall: 0.98552555
+
+Epoch  78 Train precision: 0.9847392 Train recall: 0.9856254
+Epoch: 78 Val precision: 0.98474836 Val recall: 0.9856337
+
+Epoch  79 Train precision: 0.9848701 Train recall: 0.9857319
+Epoch: 79 Val precision: 0.9848795 Val recall: 0.98573977
+
+Epoch  80 Train precision: 0.9849974 Train recall: 0.9858383
+Epoch: 80 Val precision: 0.9850064 Val recall: 0.98584664
+
+Epoch  81 Train precision: 0.98511815 Train recall: 0.9859482
+Epoch: 81 Val precision: 0.9851262 Val recall: 0.9859577
+
+Epoch  82 Train precision: 0.9852341 Train recall: 0.98606193
+Epoch: 82 Val precision: 0.9852417 Val recall: 0.9860716
+
+Epoch  83 Train precision: 0.98534536 Train recall: 0.98617494
+Epoch: 83 Val precision: 0.9853528 Val recall: 0.9861846
+
+Epoch  84 Train precision: 0.9854567 Train recall: 0.986282
+Epoch: 84 Val precision: 0.9854642 Val recall: 0.9862912
+
+Epoch  85 Train precision: 0.98556906 Train recall: 0.98638207
+Epoch: 85 Val precision: 0.98557717 Val recall: 0.9863904
+
+Epoch  86 Train precision: 0.9856833 Train recall: 0.9864751
+Epoch: 86 Val precision: 0.98569167 Val recall: 0.98648244
+
+Epoch  87 Train precision: 0.9857952 Train recall: 0.9865648
+Epoch: 87 Val precision: 0.9858031 Val recall: 0.98657197
+
+Epoch  88 Train precision: 0.9859032 Train recall: 0.9866546
+Epoch: 88 Val precision: 0.9859105 Val recall: 0.9866618
+
+Epoch  89 Train precision: 0.9860058 Train recall: 0.98674744
+Epoch: 89 Val precision: 0.9860131 Val recall: 0.98675555
+
+Epoch  90 Train precision: 0.9861036 Train recall: 0.9868428
+Epoch: 90 Val precision: 0.98611057 Val recall: 0.9868511
+
+Epoch  91 Train precision: 0.98619926 Train recall: 0.9869379
+Epoch: 91 Val precision: 0.98620605 Val recall: 0.9869458
+
+Epoch  92 Train precision: 0.98629504 Train recall: 0.9870291
+Epoch: 92 Val precision: 0.98630166 Val recall: 0.98703665
+
+Epoch  93 Train precision: 0.9863909 Train recall: 0.987115
+Epoch: 93 Val precision: 0.9863979 Val recall: 0.98712224
+
+Epoch  94 Train precision: 0.98648715 Train recall: 0.98719627
+Epoch: 94 Val precision: 0.986494 Val recall: 0.9872033
+
+Epoch  95 Train precision: 0.986582 Train recall: 0.98727804
+Epoch: 95 Val precision: 0.9865887 Val recall: 0.9872848
+
+Epoch  96 Train precision: 0.98667413 Train recall: 0.98735994
+Epoch: 96 Val precision: 0.98668057 Val recall: 0.9873667
+
+Epoch  97 Train precision: 0.9867641 Train recall: 0.987442
+Epoch: 97 Val precision: 0.9867704 Val recall: 0.9874488
+
+Epoch  98 Train precision: 0.98685205 Train recall: 0.9875228
+Epoch: 98 Val precision: 0.9868582 Val recall: 0.98752946
+
+Epoch  99 Train precision: 0.9869379 Train recall: 0.9876016
+Epoch: 99 Val precision: 0.986944 Val recall: 0.98760796
+
+Epoch  100 Train precision: 0.9870236 Train recall: 0.98767847
+Epoch: 100 Val precision: 0.98702985 Val recall: 0.9876845
+
+Epoch  101 Train precision: 0.98710907 Train recall: 0.9877514
+Epoch: 101 Val precision: 0.9871153 Val recall: 0.9877574
+
+Epoch  102 Train precision: 0.98719394 Train recall: 0.98782337
+Epoch: 102 Val precision: 0.9871999 Val recall: 0.9878292
+
+Epoch  103 Train precision: 0.9872756 Train recall: 0.9878968
+Epoch: 103 Val precision: 0.9872815 Val recall: 0.9879027
+
+Epoch  104 Train precision: 0.9873551 Train recall: 0.9879699
+Epoch: 104 Val precision: 0.98736084 Val recall: 0.9879756
+
+Epoch  105 Train precision: 0.9874334 Train recall: 0.9880419
+Epoch: 105 Val precision: 0.98743904 Val recall: 0.98804754
+
+Epoch  106 Train precision: 0.9875111 Train recall: 0.9881119
+Epoch: 106 Val precision: 0.9875166 Val recall: 0.98811746
+
+Epoch  107 Train precision: 0.987588 Train recall: 0.98818004
+Epoch: 107 Val precision: 0.9875937 Val recall: 0.9881855
+
+Epoch  108 Train precision: 0.98766434 Train recall: 0.98824686
+Epoch: 108 Val precision: 0.98766994 Val recall: 0.988252
+
+Epoch  109 Train precision: 0.9877393 Train recall: 0.9883129
+Epoch: 109 Val precision: 0.9877448 Val recall: 0.98831815
+
+Epoch  110 Train precision: 0.9878134 Train recall: 0.9883786
+Epoch: 110 Val precision: 0.98781884 Val recall: 0.9883837
+
+Epoch  111 Train precision: 0.9878857 Train recall: 0.98844326
+Epoch: 111 Val precision: 0.987891 Val recall: 0.9884483
+
+Epoch  112 Train precision: 0.98795676 Train recall: 0.9885079
+Epoch: 112 Val precision: 0.9879618 Val recall: 0.98851275
+
+Epoch  113 Train precision: 0.9880264 Train recall: 0.9885715
+Epoch: 113 Val precision: 0.9880313 Val recall: 0.9885762
+
+Epoch  114 Train precision: 0.9880951 Train recall: 0.98863345
+Epoch: 114 Val precision: 0.9881 Val recall: 0.9886381
+
+Epoch  115 Train precision: 0.9881635 Train recall: 0.9886939
+Epoch: 115 Val precision: 0.98816836 Val recall: 0.9886984
+
+Epoch  116 Train precision: 0.98823076 Train recall: 0.98875296
+Epoch: 116 Val precision: 0.9882358 Val recall: 0.9887574
+
+Epoch  117 Train precision: 0.9882971 Train recall: 0.988811
+Epoch: 117 Val precision: 0.988302 Val recall: 0.98881537
+
+Epoch  118 Train precision: 0.9883625 Train recall: 0.98886853
+Epoch: 118 Val precision: 0.98836714 Val recall: 0.9888728
+
+Epoch  119 Train precision: 0.988426 Train recall: 0.98892623
+Epoch: 119 Val precision: 0.98843074 Val recall: 0.98893046
+
+Epoch  120 Train precision: 0.9884885 Train recall: 0.9889831
+Epoch: 120 Val precision: 0.98849314 Val recall: 0.9889872
+
+Epoch  121 Train precision: 0.98855025 Train recall: 0.9890389
+Epoch: 121 Val precision: 0.98855484 Val recall: 0.9890431
+
+Epoch  122 Train precision: 0.98861116 Train recall: 0.9890938
+Epoch: 122 Val precision: 0.98861563 Val recall: 0.9890979
+
+Epoch  123 Train precision: 0.98867166 Train recall: 0.989147
+Epoch: 123 Val precision: 0.9886761 Val recall: 0.98915106
+
+Epoch  124 Train precision: 0.9887315 Train recall: 0.9891998
+Epoch: 124 Val precision: 0.98873585 Val recall: 0.9892039
+
+Epoch  125 Train precision: 0.9887901 Train recall: 0.98925257
+Epoch: 125 Val precision: 0.9887944 Val recall: 0.9892568
+
+Epoch  126 Train precision: 0.9888472 Train recall: 0.9893045
+Epoch: 126 Val precision: 0.9888514 Val recall: 0.98930866
+
+Epoch  127 Train precision: 0.9889036 Train recall: 0.9893563
+Epoch: 127 Val precision: 0.9889077 Val recall: 0.9893604
+
+Epoch  128 Train precision: 0.9889595 Train recall: 0.9894069
+Epoch: 128 Val precision: 0.98896354 Val recall: 0.9894109
+
+Epoch  129 Train precision: 0.9890147 Train recall: 0.98945653
+Epoch: 129 Val precision: 0.9890188 Val recall: 0.98946035
+
+Epoch  130 Train precision: 0.9890696 Train recall: 0.9895053
+Epoch: 130 Val precision: 0.98907363 Val recall: 0.98950905
+
+Epoch  131 Train precision: 0.9891235 Train recall: 0.98955345
+Epoch: 131 Val precision: 0.9891275 Val recall: 0.98955715
+
+Epoch  132 Train precision: 0.9891764 Train recall: 0.98960143
+Epoch: 132 Val precision: 0.98918027 Val recall: 0.98960507
+
+Epoch  133 Train precision: 0.98922884 Train recall: 0.98964816
+Epoch: 133 Val precision: 0.9892327 Val recall: 0.98965174
+
+Epoch  134 Train precision: 0.9892804 Train recall: 0.9896947
+Epoch: 134 Val precision: 0.9892842 Val recall: 0.9896983
+
+Epoch  135 Train precision: 0.9893312 Train recall: 0.989741
+Epoch: 135 Val precision: 0.98933494 Val recall: 0.98974454
+
+Epoch  136 Train precision: 0.98938143 Train recall: 0.98978734
+Epoch: 136 Val precision: 0.98938507 Val recall: 0.98979074
+
+Epoch  137 Train precision: 0.989431 Train recall: 0.98983324
+Epoch: 137 Val precision: 0.98943466 Val recall: 0.98983663
+
+Epoch  138 Train precision: 0.98948056 Train recall: 0.9898778
+Epoch: 138 Val precision: 0.9894843 Val recall: 0.9898811
+
+Epoch  139 Train precision: 0.98952997 Train recall: 0.98992157
+Epoch: 139 Val precision: 0.9895336 Val recall: 0.98992485
+
+Epoch  140 Train precision: 0.9895786 Train recall: 0.9899661
+Epoch: 140 Val precision: 0.98958206 Val recall: 0.9899693
+
+Epoch  141 Train precision: 0.98962635 Train recall: 0.9900103
+Epoch: 141 Val precision: 0.98962975 Val recall: 0.99001354
+
+Epoch  142 Train precision: 0.9896737 Train recall: 0.99005413
+Epoch: 142 Val precision: 0.9896772 Val recall: 0.99005723
+
+Epoch  143 Train precision: 0.9897211 Train recall: 0.99009675
+Epoch: 143 Val precision: 0.9897247 Val recall: 0.99009997
+
+Epoch  144 Train precision: 0.98976815 Train recall: 0.9901388
+Epoch: 144 Val precision: 0.9897718 Val recall: 0.990142
+
+Epoch  145 Train precision: 0.9898148 Train recall: 0.9901809
+Epoch: 145 Val precision: 0.9898185 Val recall: 0.990184
+
+Epoch  146 Train precision: 0.9898608 Train recall: 0.9902227
+Epoch: 146 Val precision: 0.98986447 Val recall: 0.9902258
+
+Epoch  147 Train precision: 0.98990595 Train recall: 0.9902643
+Epoch: 147 Val precision: 0.9899095 Val recall: 0.99026734
+
+Epoch  148 Train precision: 0.9899507 Train recall: 0.9903056
+Epoch: 148 Val precision: 0.9899543 Val recall: 0.9903086
+
+Epoch  149 Train precision: 0.9899953 Train recall: 0.9903461
+Epoch: 149 Val precision: 0.9899988 Val recall: 0.99034905
+
+Epoch  150 Train precision: 0.9900392 Train recall: 0.9903859
+Epoch: 150 Val precision: 0.99004257 Val recall: 0.9903888
+
+Epoch  151 Train precision: 0.9900824 Train recall: 0.99042475
+Epoch: 151 Val precision: 0.99008566 Val recall: 0.9904276
+
+Epoch  152 Train precision: 0.9901247 Train recall: 0.9904633
+Epoch: 152 Val precision: 0.9901281 Val recall: 0.9904661
+
+Epoch  153 Train precision: 0.99016637 Train recall: 0.9905022
+Epoch: 153 Val precision: 0.9901697 Val recall: 0.990505
+
+Epoch  154 Train precision: 0.99020785 Train recall: 0.9905401
+Epoch: 154 Val precision: 0.9902112 Val recall: 0.99054307
+
+Epoch  155 Train precision: 0.99024916 Train recall: 0.9905774
+Epoch: 155 Val precision: 0.99025244 Val recall: 0.99058026
+
+Epoch  156 Train precision: 0.99029034 Train recall: 0.99061424
+Epoch: 156 Val precision: 0.9902936 Val recall: 0.99061716
+
+Epoch  157 Train precision: 0.9903308 Train recall: 0.99065095
+Epoch: 157 Val precision: 0.990334 Val recall: 0.9906538
+
+Epoch  158 Train precision: 0.9903708 Train recall: 0.99068743
+Epoch: 158 Val precision: 0.9903739 Val recall: 0.9906903
+
+Epoch  159 Train precision: 0.99041015 Train recall: 0.99072325
+Epoch: 159 Val precision: 0.99041325 Val recall: 0.99072605
+
+Epoch  160 Train precision: 0.9904491 Train recall: 0.9907584
+Epoch: 160 Val precision: 0.9904521 Val recall: 0.99076116
+
+Epoch  161 Train precision: 0.9904876 Train recall: 0.9907935
+Epoch: 161 Val precision: 0.99049056 Val recall: 0.99079627
+
+Epoch  162 Train precision: 0.9905257 Train recall: 0.9908285
+Epoch: 162 Val precision: 0.9905287 Val recall: 0.9908312
+
+Epoch  163 Train precision: 0.9905636 Train recall: 0.990863
+Epoch: 163 Val precision: 0.9905665 Val recall: 0.99086565
+
+Epoch  164 Train precision: 0.99060124 Train recall: 0.9908971
+Epoch: 164 Val precision: 0.9906041 Val recall: 0.99089974
+
+Epoch  165 Train precision: 0.9906388 Train recall: 0.99093044
+Epoch: 165 Val precision: 0.99064165 Val recall: 0.99093306
+
+Epoch  166 Train precision: 0.9906758 Train recall: 0.99096376
+Epoch: 166 Val precision: 0.9906786 Val recall: 0.9909663
+
+Epoch  167 Train precision: 0.9907127 Train recall: 0.99099654
+Epoch: 167 Val precision: 0.99071544 Val recall: 0.990999
+
+Epoch  168 Train precision: 0.9907488 Train recall: 0.99102914
+Epoch: 168 Val precision: 0.99075156 Val recall: 0.9910315
+
+Epoch  169 Train precision: 0.9907848 Train recall: 0.99106115
+Epoch: 169 Val precision: 0.99078757 Val recall: 0.99106354
+
+Epoch  170 Train precision: 0.9908201 Train recall: 0.9910932
+Epoch: 170 Val precision: 0.9908229 Val recall: 0.99109554
+
+Epoch  171 Train precision: 0.9908553 Train recall: 0.99112463
+Epoch: 171 Val precision: 0.9908581 Val recall: 0.9911269
+
+Epoch  172 Train precision: 0.99088955 Train recall: 0.9911566
+Epoch: 172 Val precision: 0.9908923 Val recall: 0.99115884
+
+Epoch  173 Train precision: 0.9909246 Train recall: 0.99118656
+Epoch: 173 Val precision: 0.9909273 Val recall: 0.9911887
+
+Epoch  174 Train precision: 0.990957 Train recall: 0.991218
+Epoch: 174 Val precision: 0.99095935 Val recall: 0.99121976
+
+Epoch  175 Train precision: 0.990991 Train recall: 0.9912462
+Epoch: 175 Val precision: 0.990994 Val recall: 0.9912482
+
+Epoch  176 Train precision: 0.991 Train recall: 0.9912815
+Epoch: 176 Val precision: 0.9910002 Val recall: 0.99128395
+
+Epoch  177 Train precision: 0.991023 Train recall: 0.99131656
+Epoch: 177 Val precision: 0.9910249 Val recall: 0.99131924
+
+Epoch  178 Train precision: 0.9910524 Train recall: 0.99130785
+Epoch: 178 Val precision: 0.99105483 Val recall: 0.99130666
+
+Epoch  179 Train precision: 0.99102426 Train recall: 0.99132544
+Epoch: 179 Val precision: 0.9910208 Val recall: 0.9913261
+
+Epoch  180 Train precision: 0.9910406 Train recall: 0.99134606
+Epoch: 180 Val precision: 0.9910425 Val recall: 0.99134743
+
+Epoch  181 Train precision: 0.99096555 Train recall: 0.9913665
+Epoch: 181 Val precision: 0.99095935 Val recall: 0.9913688
+
+Epoch  182 Train precision: 0.9908808 Train recall: 0.9913861
+Epoch: 182 Val precision: 0.99087393 Val recall: 0.99138767
+
+Epoch  183 Train precision: 0.990912 Train recall: 0.9908378
+Epoch: 183 Val precision: 0.9909154 Val recall: 0.99078417
+
+Epoch  184 Train precision: 0.99073637 Train recall: 0.9908257
+Epoch: 184 Val precision: 0.99072117 Val recall: 0.9908297
+
+Epoch  185 Train precision: 0.99066967 Train recall: 0.99086726
+Epoch: 185 Val precision: 0.9906653 Val recall: 0.9908708
+
+Epoch  186 Train precision: 0.9905895 Train recall: 0.9908856
+Epoch: 186 Val precision: 0.99058294 Val recall: 0.99088675
+
+Epoch  187 Train precision: 0.99059796 Train recall: 0.99089426
+Epoch: 187 Val precision: 0.9905997 Val recall: 0.99089503
+
+Epoch  188 Train precision: 0.9906166 Train recall: 0.99091154
+Epoch: 188 Val precision: 0.99061775 Val recall: 0.9909132
+
+Epoch  189 Train precision: 0.99063694 Train recall: 0.9909164
+Epoch: 189 Val precision: 0.9906384 Val recall: 0.9909164
+
+Epoch  190 Train precision: 0.9906541 Train recall: 0.9908965
+Epoch: 190 Val precision: 0.9906558 Val recall: 0.9908955
+
+Epoch  191 Train precision: 0.99066484 Train recall: 0.99087757
+Epoch: 191 Val precision: 0.9906657 Val recall: 0.99087745
+
+Epoch  192 Train precision: 0.9906655 Train recall: 0.9908685
+Epoch: 192 Val precision: 0.99066585 Val recall: 0.99086845
+
+Epoch  193 Train precision: 0.99066883 Train recall: 0.9908691
+Epoch: 193 Val precision: 0.9906691 Val recall: 0.9908698
+
+Epoch  194 Train precision: 0.9906866 Train recall: 0.9908714
+Epoch: 194 Val precision: 0.99068755 Val recall: 0.99087226
+
+Epoch  195 Train precision: 0.9907082 Train recall: 0.99087375
+Epoch: 195 Val precision: 0.9907097 Val recall: 0.99087465
+
+Epoch  196 Train precision: 0.9907245 Train recall: 0.9908848
+Epoch: 196 Val precision: 0.9907254 Val recall: 0.990886
+
+Epoch  197 Train precision: 0.99073565 Train recall: 0.990903
+Epoch: 197 Val precision: 0.9907358 Val recall: 0.99090475
+
+Epoch  198 Train precision: 0.990746 Train recall: 0.9909243
+Epoch: 198 Val precision: 0.990746 Val recall: 0.99092644
+
+Epoch  199 Train precision: 0.9907581 Train recall: 0.9909501
+Epoch: 199 Val precision: 0.9907586 Val recall: 0.99095273
+
+Time elapsed 12.894364213943481 minutes
+

@@ -21,29 +21,6 @@ def show_image(pixels, labels, ind, shape):
     plt.title(int(labels[ind]))
     plt.axis("off")
     plt.show()
-
-
-# This function is from Hands-On Machine Learning with Scikit-Learn and Tensorflow
-def neuron_layer(X, n_neurons, name, activation = None):
-
-    with tf.name_scope(name):
-
-        n_inputs = int(X.get_shape()[1])
-
-        stddev = 2/np.sqrt(n_inputs + n_neurons)
-        init = tf.truncated_normal((n_inputs, n_neurons), stddev = stddev)
-
-        W = tf.Variable(init, name = "kernel")
-        b = tf.Variable(tf.zeros([n_neurons]), name = "bias")
-
-        Z = tf.matmul(X, W) + b
-
-        if activation is not None:
-            return activation(Z)
-
-        else:
-            return Z
-        
         
 if __name__ == "__main__":
 
@@ -88,91 +65,89 @@ if __name__ == "__main__":
 
 
     n_inputs = X.shape[1]
-    n_hidden1_list = [150, 200, 300]
-    n_hidden2_list = [150, 200, 100] 
+    n_hidden1 = 200
+    n_hidden2 = 200
     n_outputs = 10
 
-    for n_hidden1, n_hidden2 in zip(n_hidden1_list, n_hidden2_list):
+    #for n_hidden1, n_hidden2 in zip(n_hidden1_list, n_hidden2_list):
 
-        tf.reset_default_graph()
+    #tf.reset_default_graph()
         
-        X = tf.placeholder(tf.float32, shape = (None, n_inputs), name = "X")
-        Y = tf.placeholder(tf.int64, shape = (None), name = "Y")
+    X = tf.placeholder(tf.float32, shape = (None, n_inputs), name = "X")
+    Y = tf.placeholder(tf.int64, shape = (None), name = "Y")
     
     
-        with tf.name_scope("NN_1L"):
+    with tf.name_scope("NN_1L"):
         
-            hidden1 = tf.layers.dense(X, n_hidden1, name = "hidden1",
-                                      activation = tf.nn.relu)
+        hidden1 = tf.layers.dense(X, n_hidden1, name = "hidden1",
+                                  activation = tf.nn.leaky_relu)
 
-            hidden2 = tf.layers.dense(hidden1, n_hidden2, name = "hidden2",
-                                      activation = tf.nn.relu)
+        hidden2 = tf.layers.dense(hidden1, n_hidden2, name = "hidden2",
+                                  activation = tf.nn.leaky_relu)
 
-            logits = tf.layers.dense(hidden2, n_outputs, name = "outputs")
+        logits = tf.layers.dense(hidden2, n_outputs, name = "outputs")
         
 
-        with tf.name_scope("loss"):
+    with tf.name_scope("loss"):
 
-            cross_entropy = tf.nn.sparse_softmax_cross_entropy_with_logits(labels = Y,
-                                                                           logits = logits)
+        cross_entropy = tf.nn.sparse_softmax_cross_entropy_with_logits(labels = Y,
+                                                                       logits = logits)
                 
-            loss = tf.reduce_mean(cross_entropy, name = "loss")
+        loss = tf.reduce_mean(cross_entropy, name = "loss")
 
-            learning_rate = 0.01
+        learning_rate = 0.01
 
-        with tf.name_scope("train"):
+    with tf.name_scope("train"):
                 
-            # optimizer = tf.train.GradientDescentOptimizer(learning_rate)
-            optimizer = tf.train.AdamOptimizer(learning_rate)
+        # optimizer = tf.train.GradientDescentOptimizer(learning_rate)
+        optimizer = tf.train.AdamOptimizer(learning_rate)
 
-            training_op = optimizer.minimize(loss)
+        training_op = optimizer.minimize(loss)
                 
-        with tf.name_scope("eval"):
+    with tf.name_scope("eval"):
 
-            #correct = tf.nn.in_top_k(logits, Y, 1)
-            #accuracy = tf.reduce_mean(tf.cast(correct, tf.float32))
+        #correct = tf.nn.in_top_k(logits, Y, 1)
+        #accuracy = tf.reduce_mean(tf.cast(correct, tf.float32))
             
-            prediction = tf.argmax(logits, axis = 1)
-            precision, precision_op = tf.metrics.precision(Y, tf.argmax(logits, axis = 1))
-            recall, recall_op = tf.metrics.recall(Y, prediction)
-            
-
+        prediction = tf.argmax(logits, axis = 1)
+        precision, precision_op = tf.metrics.precision(Y, tf.argmax(logits, axis = 1))
+        recall, recall_op = tf.metrics.recall(Y, prediction)
             
 
-        init = tf.global_variables_initializer()
-        init_local = tf.local_variables_initializer()
+    init = tf.global_variables_initializer()
+    init_local = tf.local_variables_initializer()
 
-        saver = tf.train.Saver
+    saver = tf.train.Saver
+    
+    n_epochs = 200
+    #batch_size = 10
 
-        n_epochs = 200
-        #batch_size = 10
+    with tf.Session() as sess:
 
-        with tf.Session() as sess:
+        print()
+        print("Starting to train with Leaky ReLu activation and Adam")
+        print("First hidden layer:", n_hidden1)
+        print("Second hidden layer:", n_hidden2)
 
+            
+        start_time = time.time()
+            
+        init.run()
+        init_local.run()
+            
+        for epoch in range(n_epochs):
+
+            sess.run(training_op, feed_dict = {X: X_train, Y: Y_train})
+            prec_train = sess.run(precision_op, feed_dict = {X: X_train, Y: Y_train})
+            recall_train = sess.run(recall_op, feed_dict = {X: X_train, Y: Y_train})
+            
+            prec_val = sess.run(precision_op, feed_dict = {X: X_val, Y: Y_val})
+            recall_val = sess.run(recall_op, feed_dict = {X: X_val, Y: Y_val})
+                
+            print("Epoch ", epoch, "Train precision:", prec_train, "Train recall:", recall_train)
+            print("Epoch:", epoch, "Val precision:", prec_val, "Val recall:", recall_val)
             print()
-            print("Starting to train with ReLu activation and Adam")
-            print("First hidden layer:", n_hidden1)
-            print("Second hidden layer:", n_hidden2)
-
-            
-            start_time = time.time()
-            
-            init.run()
-            init_local.run()
-            
-            for epoch in range(n_epochs):
-
-                sess.run(training_op, feed_dict = {X: X_train, Y: Y_train})
-                prec_train = sess.run(precision_op, feed_dict = {X: X_train, Y: Y_train})
-                recall_train = sess.run(recall_op, feed_dict = {X: X_train, Y: Y_train})
-
-                prec_val = sess.run(precision_op, feed_dict = {X: X_val, Y: Y_val})
-                recall_val = sess.run(recall_op, feed_dict = {X: X_val, Y: Y_val})
-                
-                print("Epoch ", epoch, "Train precision:", prec_train, "Train recall:", recall_train)
-                print("Epoch:", epoch, "Val precision:", prec_val, "Val recall:", recall_val)
-                print()
                 
 
-            print("Time elapsed", (time.time() - start_time)/60, "minutes")
-            print()
+        print("Time elapsed", (time.time() - start_time)/60, "minutes")
+        print()
