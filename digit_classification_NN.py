@@ -12,6 +12,7 @@ from sklearn.preprocessing import label_binarize
 from sklearn.model_selection import train_test_split, cross_val_score
 from sklearn.metrics import confusion_matrix, precision_recall_curve, average_precision_score
 
+from datetime import datetime
 
 def show_image(pixels, labels, ind, shape):
 
@@ -24,6 +25,10 @@ def show_image(pixels, labels, ind, shape):
         
 if __name__ == "__main__":
 
+    now = datetime.utcnow().strftime("%Y%m%d%H%M%S")
+    root_logdir = "tf_logs"
+    logdir = "{}/run-{}/".format(root_logdir, now)
+    
     # Load the data
     mnist = sio.loadmat('/home/ivy/scikit_learn_data/mldata/mnist-original', squeeze_me = True)
 
@@ -75,16 +80,22 @@ if __name__ == "__main__":
         
     X = tf.placeholder(tf.float32, shape = (None, n_inputs), name = "X")
     Y = tf.placeholder(tf.int64, shape = (None), name = "Y")
+
+    train_writer = tf.summary.FileWriter(logdir + '/train', tf.get_default_graph())
+    val_writer = tf.summary.FileWriter(logdir + '/val', tf.get_default_graph())
     
-    
-    with tf.name_scope("NN_1L"):
+    with tf.name_scope("NN_2L"):
         
         hidden1 = tf.layers.dense(X, n_hidden1, name = "hidden1",
                                   activation = tf.nn.leaky_relu)
 
+        tf.summary.histogram('hidden1', hidden1)
+
         hidden2 = tf.layers.dense(hidden1, n_hidden2, name = "hidden2",
                                   activation = tf.nn.leaky_relu)
 
+        tf.summary.histogram('hidden2', hidden2)
+        
         logits = tf.layers.dense(hidden2, n_outputs, name = "outputs")
         
 
@@ -112,7 +123,14 @@ if __name__ == "__main__":
         prediction = tf.argmax(logits, axis = 1)
         precision, precision_op = tf.metrics.precision(Y, tf.argmax(logits, axis = 1))
         recall, recall_op = tf.metrics.recall(Y, prediction)
-            
+
+
+        tf.summary.scalar('precision', precision)
+        tf.summary.scalar('recall', recall)
+
+        write_op = tf.summary.merge_all()
+        
+
 
     init = tf.global_variables_initializer()
     init_local = tf.local_variables_initializer()
@@ -137,17 +155,28 @@ if __name__ == "__main__":
             
         for epoch in range(n_epochs):
 
+            print("Epoch", epoch)
             sess.run(training_op, feed_dict = {X: X_train, Y: Y_train})
+
+
             prec_train = sess.run(precision_op, feed_dict = {X: X_train, Y: Y_train})
             recall_train = sess.run(recall_op, feed_dict = {X: X_train, Y: Y_train})
             
             prec_val = sess.run(precision_op, feed_dict = {X: X_val, Y: Y_val})
             recall_val = sess.run(recall_op, feed_dict = {X: X_val, Y: Y_val})
-                
+
+            train = write_op.eval(feed_dict = {X: X_train, Y: Y_train})
+            train_writer.add_summary(train, epoch)
+            
+            validation = write_op.eval(feed_dict = {X: X_val, Y: Y_val})
+            val_writer.add_summary(validation, epoch)
+
             print("Epoch ", epoch, "Train precision:", prec_train, "Train recall:", recall_train)
             print("Epoch:", epoch, "Val precision:", prec_val, "Val recall:", recall_val)
             print()
-                
 
-        print("Time elapsed", (time.time() - start_time)/60, "minutes")
-        print()
+    train_writer.close()
+    val_writer.close()
+    
+    print("Time elapsed", (time.time() - start_time)/60, "minutes")
+    print()
