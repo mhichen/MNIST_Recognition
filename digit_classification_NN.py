@@ -118,7 +118,7 @@ if __name__ == "__main__":
                                          padding = 'valid')
 
         # C5 - Convolution
-        C5 = tf.layers.conv2d(S4, filters = 1, kernel_size = [5, 5], strides = (1, 1),
+        C5 = tf.layers.conv2d(S4, filters = 16, kernel_size = [5, 5], strides = (1, 1),
                                    padding = 'valid', activation = tf.nn.tanh)
         
         F6 = tf.layers.dense(C5, units = 120, activation = tf.nn.tanh)
