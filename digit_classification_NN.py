@@ -23,11 +23,11 @@ def show_image(pixels, labels, ind, shape):
     plt.axis("off")
     plt.show()
     
-def fetch_batch(epoch, batch_index, batch_size):
+def fetch_batch(X, Y, m, epoch, batch_index, batch_size):
     np.random.seed(epoch * n_batches + batch_index)  
     indices = np.random.randint(m, size=batch_size)  
-    X_batch = scaled_housing_data_plus_bias[indices] 
-    y_batch = housing.target.reshape(-1, 1)[indices] 
+    X_batch = X[indices] 
+    y_batch = Y[indices] 
     return X_batch, y_batch
     
 if __name__ == "__main__":
@@ -62,6 +62,7 @@ if __name__ == "__main__":
     #Y_mod = label_binarize(Y, classes = range(10))
 
     n_classes = 10
+
     
     print("n_classes:", n_classes)
     print()
@@ -84,7 +85,7 @@ if __name__ == "__main__":
     n_inputs = X.shape[0]
     n_outputs = 10
     n_epochs = 200
-    batch_size = 10
+    batch_size = 200
     
     learning_rate = 0.01
         
@@ -139,7 +140,7 @@ if __name__ == "__main__":
 
     with tf.name_scope("train"):
 
-        optimizer = tf.train.AdamOptimizer(learning_rate)
+        optimizer = tf.train.GradientDescentOptimizer(learning_rate)
         train_op = optimizer.minimize(loss)
         
     with tf.name_scope("eval"):
@@ -177,15 +178,17 @@ if __name__ == "__main__":
 
             for b in range(n_batches):
 
+                X_batch, Y_batch = fetch_batch(X_train, Y_train, m_train, epoch, b, batch_size)
+                
                 # print("batch b", b, b*batch_size, (b + 1)*batch_size)
 
-                if (b - 1) != n_batches:
-                    X_batch = X_train[b*batch_size:(b + 1)*batch_size, :, :, :]
-                    Y_batch = Y_train[b*batch_size:(b + 1)*batch_size]
+                # if (b - 1) != n_batches:
+                #     X_batch = X_train[b*batch_size:(b + 1)*batch_size, :, :, :]
+                #     Y_batch = Y_train[b*batch_size:(b + 1)*batch_size]
 
-                else:
-                    X_batch = X_train[b*batch_size:, :, :, :]
-                    Y_batch = Y_train[b*batch_size:]
+                # else:
+                #     X_batch = X_train[b*batch_size:, :, :, :]
+                #     Y_batch = Y_train[b*batch_size:]
 
                 # print("X_batch", X_batch.shape)
                 # print("Y_batch", Y_batch.shape)
