@@ -85,7 +85,7 @@ if __name__ == "__main__":
     n_inputs = X.shape[0]
     n_outputs = 10
     n_epochs = 200
-    batch_size = 200
+    batch_size = 100
     
     learning_rate = 0.01
         
@@ -180,19 +180,6 @@ if __name__ == "__main__":
 
                 X_batch, Y_batch = fetch_batch(X_train, Y_train, m_train, epoch, b, batch_size)
                 
-                # print("batch b", b, b*batch_size, (b + 1)*batch_size)
-
-                # if (b - 1) != n_batches:
-                #     X_batch = X_train[b*batch_size:(b + 1)*batch_size, :, :, :]
-                #     Y_batch = Y_train[b*batch_size:(b + 1)*batch_size]
-
-                # else:
-                #     X_batch = X_train[b*batch_size:, :, :, :]
-                #     Y_batch = Y_train[b*batch_size:]
-
-                # print("X_batch", X_batch.shape)
-                # print("Y_batch", Y_batch.shape)
-                
                 sess.run(train_op, feed_dict = {X: X_batch, Y: Y_batch})
 
                 _, prec_train, recall_train, accuracy_train = sess.run([train_op, precision_op, recall_op, accuracy], feed_dict = {X: X_batch, Y: Y_batch})
@@ -211,8 +198,17 @@ if __name__ == "__main__":
             print("Epoch:", epoch, "Val precision:", prec_val, "Val recall:", recall_val, "Val accuracy:", accuracy_val)
             print()
 
-    train_writer.close()
-    val_writer.close()
+        train_writer.close()
+        val_writer.close()
+
+
+        print("Time elapsed for training", (time.time() - start_time)/60, "minutes")
+        
+        prec_test, recall_test, accuracy_test = sess.run([precision_op, recall_op, accuracy], feed_dict = {X: X_test, Y: Y_test})
+
+        print("Test precision:", prec_test, "Test recall:", recall_test, "Test accuracy:", accuracy_test)
+        print()
+        
     
     print("Time elapsed", (time.time() - start_time)/60, "minutes")
     # print()
