@@ -139,7 +139,7 @@ if __name__ == "__main__":
 
     with tf.name_scope("train"):
 
-        optimizer = tf.train.GradientDescentOptimizer(learning_rate)
+        optimizer = tf.train.AdamOptimizer(learning_rate)
         train_op = optimizer.minimize(loss)
         
     with tf.name_scope("eval"):
